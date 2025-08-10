@@ -1,0 +1,9 @@
+<h2>Your Blog Posts</h2>
+<ul>
+  {% for post in posts %}
+  <li>{{ post.title }} {% if post.draft %}(Draft){% endif %}</li>
+  {% empty %}
+  <li>No posts found.</li>
+  {% endfor %}
+</ul>
+
